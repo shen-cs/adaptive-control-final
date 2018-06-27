@@ -30,7 +30,7 @@ det(ctrb(A,B))
 %%
 K = lqr(A,B,Q,R);
 
-tspan = 0:.001:10;
+tspan = 0:.001:20;
 if(s==-1)
     y0 = [0; 0; 0; 0];
     [t,y] = ode45(@(t,y)cartpend(y,m,M,L,g,d,-K*(y-[4; 0; 0; 0])),tspan,y0);
